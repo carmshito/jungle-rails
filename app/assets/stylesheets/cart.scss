@@ -9,4 +9,18 @@
     background: rgba(0, 130, 29, 0.7);
     color: white;
   }
+
+}
+
+.empty-cart-alert {
+  padding: 15px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  color: #8a6d3b;
+
+  .alert-link {
+    color: #66512c;
+  }
 }
