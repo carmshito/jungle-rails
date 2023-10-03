@@ -1,21 +1,19 @@
 Rails.application.routes.draw do
 
-  get 'about/index'
   root to: 'products#index'
   
-  resources :about, only: [:index]
-
   resources :products, only: [:index, :show]
+  resources :about, only: [:index]
   resources :categories, only: [:show]
-
+  
   resource :cart, only: [:show] do
     post   :add_item
     post   :remove_item
   end
-
-
+  
   resources :orders, only: [:create, :show]
-
+  
+  
   namespace :admin do
     root to: 'dashboard#show'
     resources :products, except: [:edit, :update, :show]
