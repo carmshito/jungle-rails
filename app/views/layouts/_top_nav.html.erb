@@ -66,6 +66,13 @@
           <%= link_to cart_path, class: "nav-link " do %> <%= fa_icon "shopping-cart" %>
           My Cart (<%= cart.size %>) <% end %>
         </li>
+        <li class="nav-item d-flex align-items-center text-white">
+          <% if current_user %>
+            Hi, <%= current_user.name %>! <a class="btn btn-outline-light ms-2" href="/logout" role="button">Logout</a>
+          <% else %>
+          <a class="btn btn-outline-light me-2" href="/login" role="button">Login</a><a class="btn btn-outline-light" href="/signup" role="button">Sign Up</a>
+          <% end %>
+        </li>
       </ul>
     </div>
   </div>
